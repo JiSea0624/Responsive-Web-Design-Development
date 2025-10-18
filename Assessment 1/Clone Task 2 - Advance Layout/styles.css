@@ -1,0 +1,399 @@
+body {
+    background-color: white;
+    font-family: 'Lato';
+    margin: auto;
+}
+
+/*Navigation Bar*/
+.navbar { 
+    background-color: #070410;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    box-shadow: 0 10px 8px #272629;
+
+    h1 {
+        margin: 0;
+        font-size: 3em;
+        font-family: 'Teko';
+        color: #EEF36A;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 48px; 
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 16px;
+        }
+    }
+
+    button {
+        background-color: #070410;
+        color: white;
+        border: 2px solid white;
+        padding: 16px;
+        font-size: 2em;
+        cursor: pointer;
+        border-radius: 12px; 
+        font-family: 'Teko';
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+/*Style for the Headers*/
+.movie_content h1, .info h1, .info1 h1, .content h1 {
+    font-family: 'Teko';
+    font-size: 3em;
+    margin: 0;
+}
+
+/*Style for the Paragraphs*/
+p {
+    margin: 0 0 16px 0;
+    font-size: 1.5em;
+}
+
+/*Style for the Buttons*/
+.watch_now button, .info button, .info1 button {
+    background-color: #231651;
+    color: white;
+    border: 2px solid #231651;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 2em;
+    font-family: 'Teko';
+    width: 100%;
+    align-self: center;
+
+    &:hover {
+        background-color: white;
+        color: #231651;
+        }
+}
+
+/*Main Content Style*/
+.main_content {
+    max-width: 900px; 
+    margin: auto;
+    padding: 48px 0;
+    display: grid;
+    grid-template-areas: 
+        "feature feature"
+        "poster1 poster2"
+        "poster3 poster3"
+        "poster4 poster4"
+        "poster5 poster5";
+    gap: 48px;
+
+    /*Style for the 1st Movie Poster*/
+    .poster {
+        grid-area: feature;
+        border-style: solid;
+        box-shadow: 10px 10px 8px #272629;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        
+        .movie_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px;
+            width: auto;
+            gap: 16px;
+
+            .info {
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .watch_now {
+                width: 35%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+}
+
+    /*Style for the Movie Posters in 2 Columns*/
+    .feature1, .feature2 { 
+        border-style: solid;
+        box-shadow: 10px 10px 8px #272629;
+        align-content: center;
+        gap: 48px; 
+
+        .info, .info1 {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .info2 {
+            margin: 16px;
+            padding: 0;
+                
+            .click_me {
+                margin-top: 7%;
+            }
+        }
+    }
+
+    .feature1 {
+        grid-area: poster1; 
+    } 
+
+    .feature2 { 
+        grid-area: poster2; 
+    }
+
+    /*Style for the 3rd to Last Movie Posters*/
+    .feature3, .feature4, .feature5 { 
+        border-style: solid;
+        box-shadow: 10px 10px 8px #272629;
+        align-content: center;
+        display: flex;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .solo_content {
+            width: 50%;
+            display: flex;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                margin: 16px; 
+                height: auto;
+
+                button {
+                    background-color: #231651;
+                    color: white;
+                    border: 2px solid #231651;
+                    padding: 16px;
+                    cursor: pointer;
+                    border-radius: 12px;
+                    font-size: 2em;
+                    font-family: 'Teko';
+                    width: 100%;
+                    align-self: center; 
+                    margin-top: auto; 
+
+                    &:hover {
+                        background-color: white;
+                        color: #231651;
+                    }
+                }
+            }
+        }
+    }
+
+    .feature3 { 
+        grid-area: poster3;
+    }
+
+    .feature4 { 
+        grid-area: poster4;
+    }
+
+    .feature5 { 
+        grid-area: poster5;
+    }
+}
+
+/*Screen Width for Tablet*/
+@media screen and (min-width:710px) and (max-width:1000px) {
+    .navbar {
+        padding: 32px;
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 16px; 
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 15px;
+                padding: 16px;
+            }
+        }
+    }
+
+    .main_content {
+        grid-template-areas: 
+            "feature poster1"
+            "poster2 poster3"
+            "poster4 poster5";
+        gap: 32px;
+        margin: 0 32px;
+        padding: 32px 0;
+
+        h1 {
+            line-height: 50px;
+            }
+        
+        .poster {
+            display: flex;
+            flex-direction: column;
+            
+            .movie_content {
+                display: flex;
+                flex-direction: column;
+
+                .info {
+                    width: 100%;
+                }
+
+                .watch_now {
+                    width: 100%;
+                }
+            }
+        }
+
+        .feature1, .feature2 {
+            display: flex;
+            flex-direction: column;
+
+            .info2 {
+                margin: 16px;
+
+                button {
+                    margin-top: 75px;
+                }
+
+                .click_me {
+                    margin-top: 120px;
+                }
+            }
+        }
+
+        .feature3, .feature4, .feature5 { 
+            display: flex;
+            flex-direction: column;
+
+            .solo_content {
+                width: 100%;
+                display: flex;
+            }
+        }
+
+        .feature4 {
+            .solo_content {
+                .content button {
+                margin-top: 25px;
+            }
+        }
+    }
+
+        .poster img, .feature1 img, .feature2 img, .feature3 img, .feature4 img, .feature5 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+/*Screen Width for Mobile*/
+@media screen and (min-width:300px) and (max-width:700px) {
+    .navbar { 
+        padding: 16px;
+        width: auto;
+        display: flex;
+        box-shadow: none;
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            font-family: 'Teko';
+            color: #EEF36A;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: none;
+        }
+    }
+
+    .movie_content h1, .info h1, .info1 h1, .content h1 {
+        font-family: 'Teko';
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .main_content {
+        padding: 16px 0;
+        display: grid;
+        grid-template-areas: 
+            "feature feature"
+            "poster1 poster1"
+            "poster2 poster2"
+            "poster3 poster3"
+            "poster4 poster4"
+            "poster5 poster5";
+        gap: 48px;
+
+        .poster {
+            grid-area: feature;
+            box-shadow: none;
+            
+            .movie_content {
+                flex-direction: column;
+
+                .info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .watch_now {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .feature1, .feature2 { 
+            box-shadow: none;
+        }
+
+        .feature3, .feature4, .feature5 {  
+            box-shadow: none;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .solo_content {
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+}
