@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Novu</title>
+        <!-- Font Link in Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Header -->
+            <header>
+                <div class="header-contents">
+                    <div class="left-items">
+                        <!-- Logo -->
+                        <img src="pics/logo.png" alt="Novu Logo" class="logo">
+                        <h1>Novu</h1>
+                    </div>
+                    <div class="right-items">
+                        <!-- Profile -->
+                        <div class="login">
+                            <button id="loginBtn">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Contents -->
+            <main class="main-contents">
+                <!-- Welcome Section -->
+                <section class="intro-section">
+                    <h2>Welcome to Novu</h2>
+                    <p class="subtitle">Read, Comment and Explore more of my Finished Stories</p>
+                    <button id="browseBtn">Browse All Stories</button>
+                </section>
+
+                <!-- Stories Section (Hidden by default) -->
+                <section id="storiesSection" class="hidden">
+                    <h2>All Stories</h2>
+                    <div class="stories-grid" id="storiesGrid">
+                        <!-- Stories will be added by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- About Section (Hidden by default) -->
+                <section id="aboutSection" class="hidden">
+                    <div class="about-container">
+                        <div class="contents">
+                            <h3>About Novu</h3>
+                            <p>Novu—short for Narratives of You—is a space where Mise (The Author's Pen Name) shares her stories with the world. Dive into her tales, explore her imagination, and leave your thoughts in the comments.<br><br>Novu is all about connecting readers with the author's narratives, offering a place to enjoy, reflect, and engage with stories created just for you.</p>
+                        </div>
+                        <div class="logo-img">
+                            <img src="pics/logo.png" alt="Novu Logo">
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; <span id="currentYear">2025</span> Novu. All Stories are my Original Work</p>
+                </div>
+            </footer>
+
+            <!-- Link of External Javascript -->
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>
